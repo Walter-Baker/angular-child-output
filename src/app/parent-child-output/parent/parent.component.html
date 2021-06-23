@@ -1,0 +1,6 @@
+<child-output (newItemEvent)="addItem($event)"></child-output>
+<h3>Parent component receiving value via @Output()</h3>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
