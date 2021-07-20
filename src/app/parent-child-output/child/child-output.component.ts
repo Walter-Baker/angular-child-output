@@ -7,7 +7,17 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ChildOutputComponent {
   @Output() newItemEvent = new EventEmitter<string>();
 
+  counter = 0;
+
   addNewItem(value: string) {
     this.newItemEvent.emit(value);
+  }
+
+  IncrementCounter(){
+    ++this.counter;
+  }
+
+  Print(value: any){
+    console.log(value);
   }
 }

@@ -1,5 +1,13 @@
 <h2>Child component with @Output()</h2>
 
 <label for="item-input">Add an item:</label>
-<input type="text" id="item-input" #newItem>
+<input 
+  type="text"
+  id="item-input"
+  #newItem
+  (change)="IncrementCounter(); Print(newItem.value);"
+  >
+
 <button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+
+{{counter}}
